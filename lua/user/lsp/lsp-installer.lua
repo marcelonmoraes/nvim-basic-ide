@@ -12,6 +12,16 @@ local servers = {
   "bashls",
   "jsonls",
   "yamlls",
+  "solargraph",
+  "cucumber_language_server",
+  "dockerls",
+  "bashls",
+  "eslint",
+  "golangci_lint_ls",
+  "quick_lint_js",
+  "tailwindcss",
+  "vuels",
+  "yamlls",
 }
 
 lsp_installer.setup()
@@ -37,6 +47,11 @@ for _, server in pairs(servers) do
   if server == "pyright" then
     local pyright_opts = require "user.lsp.settings.pyright"
     opts = vim.tbl_deep_extend("force", pyright_opts, opts)
+  end
+
+  if server == "eslint" then
+    local eslint_opts = require "lspconfig.server_configurations.eslint"
+    opts = vim.tbl_deep_extend("force", eslint_opts, opts)
   end
 
   lspconfig[server].setup(opts)
