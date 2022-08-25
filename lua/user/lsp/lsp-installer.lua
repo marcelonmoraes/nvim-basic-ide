@@ -21,7 +21,6 @@ local servers = {
   "quick_lint_js",
   "tailwindcss",
   "vuels",
-  "yamlls",
 }
 
 lsp_installer.setup()

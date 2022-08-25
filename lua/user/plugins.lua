@@ -97,6 +97,11 @@ return packer.startup(function(use)
   use { "ravenxrz/DAPInstall.nvim", commit = "8798b4c36d33723e7bba6ed6e2c202f84bb300de" }
 
   use { "skywind3000/vim-terminal-help", branch = "master" }
+  use { "tpope/vim-rails", branch = "master" }
+  use { "tpope/vim-bundler", branch = "master" }
+  use { "vim-test/vim-test", branch = "master" }
+  use { "kule/vim-rubocop", branch = "master" }
+  use { "christoomey/vim-tmux-runner", branch = "master" }
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
